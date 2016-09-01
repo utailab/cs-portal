@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title></title>
+    </head>
+
+    <body>
+       
+        {% if student %}
+            <img src="{{ student.pic.url }}">
+            <ul>
+                <li>User: {{ student.user }}</li>
+                <li>First Name: {{ student.user.first_name }}</li>
+                <li>Last Name: {{ student.user.last_name }}</li>
+                <li>Bio: {{ student.bio }}</li>
+                <li>CV: {{ student.cv }}</li>
+            </ul>
+        {% endif %}
+
+    </body>
+</html>

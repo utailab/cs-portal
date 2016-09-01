@@ -33,7 +33,7 @@ class Student(models.Model):
     bio = models.TextField(verbose_name='bio')
     cv = models.TextField(verbose_name='CV')
     pic = models.ImageField(verbose_name='profile picture',
-                            upload_to=user_directory_path)
+                            upload_to='uploads')
 
     def __str__(self):
         return '{}'.format(self.user.get_username())
