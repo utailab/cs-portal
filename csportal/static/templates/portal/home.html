@@ -1,10 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
+  <meta charset="UTF-8">
+  <title>CS Club</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 </head>
 <body>
+  <nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed"
+          data-toggle="collapse" data-target="#navbar"
+          aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#">CS Club</a>
+      </div>
+      <div id="navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#blog">Blog</a></li>
+          <li><a href="#students">Students</a></li>
+          <li><a href="#projects">Projects</a></li>
+        </ul>
+      </div><!-- nav-collapse -->
+    </div>
+  </nav>
 
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1>{% lorem 2 w %}</h1>
+      <p>{% lorem %}</p>
+      <p><a class="btn btn-primary btn-lg" href="#"
+        role="button">Learn more &raquo;</a></p>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h2>Latest Blog Post</h2>
+        <p>{% lorem 2 %}</p>
+        <p><a class="btn btn-default" href="#"
+          role="button">More &raquo;</a></p>
+      </div>
+      <div class="col-md-6">
+        <h2>Latest Projects</h2>
+        <ul>
+          {% for _ in "12345" %}
+            <li><a href="">{% lorem 3 w random %}</a></li>
+          {% endfor %}
+        </ul>
+        <p><a class="btn btn-default" href="#"
+          role="button">More &raquo;</a></p>
+      </div>
+    </div>
+
+    <hr>
+    <footer>
+      <p>University of Tehran | Computer Science Club</p>
+    </footer>
+  </div> <!-- container -->
 </body>
 </html>
