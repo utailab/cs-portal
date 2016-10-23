@@ -3,54 +3,57 @@
     <head>
         <meta charset="UTF-8">
         <title>{{ student.user.first_name }} {{ student.user.last_name }}</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+            integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+            integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" 
+            crossorigin="anonymous">
+        </script>
     </head>
     <body>
         <nav class="navbar navbar-inverse navbar-fixed-top">
             <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle collapsed"
-                data-toggle="collapse" data-target="#navbar"
-                aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="#">CS Club</a>
-            </div>
-            <div id="navbar" class="collapse navbar-collapse">
-                <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Overview</a></li>
-                <li><a href="#blog">CV</a></li>
-                <li><a href="#projects">Projects</a></li>
-                </ul>
-            </div><!-- nav-collapse -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed"
+                    data-toggle="collapse" data-target="#navbar"
+                    aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">CS Club</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Overview</a></li>
+                    <li><a href="#blog">CV</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    </ul>
+                </div><!-- nav-collapse -->
             </div>
         </nav>
 		<br/>
 		<div class="jumbotron">
-         <div class="container">
-             <div class="row">
-                 <div class="col-sm-4">
-                    <img src={{ student.pic.url }} class="img-rounded" alt="{{ student.user.first_name }} {{ student.user.last_name }}" width="300" height="300">
-                 </div>   
-                <div class="col-sm-7" style="text-align: center;">
-                    <h1>{{ student.user.first_name }} {{ student.user.last_name }}</h1><br><br>
-                    <h2>{{ student.user }}</h2>
-                    <h2>Computer Science</h2>
-                    <p>e-mail : <a href="#">{{ student.user.email }}</a></p>
-                    <a href="#">projects <span class="badge">0</span></a>
-                    <a href="#">friends <span class="badge">0</span></a>
-                </div>
-             </div>       
-        </div>
-      </div>
-		<!-- ok --> 
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <img src={{ student.pic.url }} class="img-rounded" alt="{{ student.user.first_name }} {{ student.user.last_name }}" width="300" height="300">
+                    </div>   
+                    <div class="col-sm-7" style="text-align: center;">
+                        <h1>{{ student.user.first_name }} {{ student.user.last_name }}</h1><br><br>
+                        <h2>{{ student.user }}</h2>
+                        <h2>Computer Science</h2>
+                        <p>E-mail : <a href="#">{{ student.user.email }}</a></p>
+                        <a href="#">projects <span class="badge">0</span></a>
+                        <a href="#">friends <span class="badge">0</span></a>
+                    </div>
+                </div>       
+            </div>
+        </div> 
         
-      <div class="container">
+        <div class="container">
     		<div class="row">
       		    <div class="col-md-6">
         			<h2>Student CV</h2>
@@ -61,9 +64,9 @@
        				<p>{{ student.bio }}</p>
 				</div>
     		</div>
-    	<hr>
-    	<footer>
-      	<p>University of Tehran | Computer Science Club</p>
-    	</footer>
-  	</div>   
+    	    <hr>
+    	        <footer>
+      	            <p>University of Tehran | Computer Science Club</p>
+    	        </footer>
+  	    </div>   
 </html>
