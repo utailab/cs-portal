@@ -1,4 +1,31 @@
 {% extends "base.html" %}
+
+{% block navbar %}
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed"
+                        data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">CS Club</a>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#blog">Blog</a></li>
+                    <li><a href="#students">Students</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                </ul>
+            </div><!-- nav-collapse -->
+        </div>
+    </nav>
+{% endblock navbar %}
+
 {% block content %}
   <!-- Main jumbotron for a primary marketing message or call to action -->
   <div class="jumbotron">
@@ -29,10 +56,5 @@
           role="button">More &raquo;</a></p>
       </div>
     </div>
-
-    <hr>
-    <footer>
-      <p>University of Tehran | Computer Science Club</p>
-    </footer>
   </div> <!-- container -->
 {% endblock content %}
