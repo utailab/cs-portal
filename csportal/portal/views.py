@@ -9,7 +9,6 @@ def home(request):
 def about(request):
     return render(request, 'portal/about.html')
     
-def show_all_students(request):
-
-     return render(request, 'portal/showstudents.html', {'students' : Student.objects.all()})
+def users(request):
+     return render(request, 'portal/users.html', {'students' : Student.objects.all()})
     

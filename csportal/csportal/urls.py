@@ -24,7 +24,7 @@ from user.views import profile
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.home),
-    url(r'^students$', views.show_all_students),
+    url(r'^users/$', views.users),
     url(r'^about/$', views.about),
-    url(r'^users/(?P<username>[0-9]{9})/$', profile ),
+    url(r'^users/(?P<username>[0-9]{9})/$', profile),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
