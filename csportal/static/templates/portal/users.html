@@ -27,34 +27,24 @@
 {% endblock navbar %}
 
 {% block content %}
-  <!-- Main jumbotron for a primary marketing message or call to action -->
-  <div class="jumbotron">
-    <div class="container">
-      <h1>{% lorem 2 w %}</h1>
-      <p>{% lorem %}</p>
-      <p><a class="btn btn-primary btn-lg" href="#"
-        role="button">Learn more &raquo;</a></p>
+    <br><br><br>
+    <div class='row col-sm-10 col-sm-offset-1' align="center">
+        <br><p><strong><font size='5'>{{students.count}} Member students </font></strong></p><hr> 
     </div>
-  </div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-md-6">
-        <h2>Latest Blog Post</h2>
-        <p>{% lorem 2 %}</p>
-        <p><a class="btn btn-default" href="#"
-          role="button">More &raquo;</a></p>
-      </div>
-      <div class="col-md-6">
-        <h2>Latest Projects</h2>
-        <ul>
-          {% for _ in "12345" %}
-            <li><a href="">{% lorem 3 w random %}</a></li>
-          {% endfor %}
-        </ul>
-        <p><a class="btn btn-default" href="#"
-          role="button">More &raquo;</a></p>
-      </div>
-    </div>
-  </div> <!-- container -->
+    {% for student in students %}                
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                  <img src={{ student.pic.url }} class="img-rounded"  width="100" height="100">
+                </div>
+                <div class="col-md-10">
+                    <a href='{{student.user}}'><h2>{{ student.user }}</h2></a>
+                    <p>{{ student.user.first_name }}  {{ student.user.last_name }}</p>
+                </div>
+            </div> 
+            <hr> 
+        </div>
+    {% endfor %}
 {% endblock content %}
+
+
